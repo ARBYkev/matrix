@@ -8,11 +8,11 @@ public class Driver {
 	public static void main(String[] args) {
 
 
-		Scanner input;
+		
 		
 		try {
-			input = new Scanner ( new FileInputStream ("matrixA.dat"));
-			
+			Scanner input = new Scanner ( new FileInputStream ("matrixA.dat"));
+			Scanner input2 = new Scanner ( new FileInputStream ("matrixB.dat"));
 		    
 		    
 			while ( input.hasNextLine() )
@@ -23,7 +23,17 @@ public class Driver {
 				
 				
 			}	
+			input.close();
+			System.out.println(" ");
+			
+			while ( input2.hasNextLine() )
+			{
+				System.out.println(input2.nextLine());
+									
 				
+			}	
+			
+			input2.close();
 			
 			
 			
