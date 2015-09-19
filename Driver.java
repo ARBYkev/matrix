@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -10,11 +11,15 @@ public class Driver {
 		Scanner input;
 		
 		try {
-			input = new Scanner ( new File ("matrixA.dat"));
-		
-			while ( input.hasNextInt() )
+			input = new Scanner ( new FileInputStream ("matrixA.dat"));
+			
+		    
+		    
+			while ( input.hasNextLine() )
 			{
-				System.out.println(input.nextInt());
+				System.out.println(input.nextLine());
+				
+				
 				
 				
 			}	
