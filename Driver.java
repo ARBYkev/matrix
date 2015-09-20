@@ -11,29 +11,18 @@ public class Driver {
 		
 		
 		try {
-			Scanner input = new Scanner ( new FileInputStream ("matrixA.dat"));
-			Scanner input2 = new Scanner ( new FileInputStream ("matrixB.dat"));
-		    
-		    
-			while ( input.hasNextLine() )
-			{
-				System.out.println(input.nextLine());
-				
-				
-				
-				
-			}	
-			input.close();
-			System.out.println(" ");
 			
-			while ( input2.hasNextLine() )
-			{
-				System.out.println(input2.nextLine());
-									
-				
-			}	
+			FileInputStream matrixA = new FileInputStream ("matrixA.dat");
+			FileInputStream matrixB = new FileInputStream ("matrixB.dat");
 			
-			input2.close();
+			Scanner input = new Scanner ( matrixA );
+			Scanner input2 = new Scanner ( matrixB);
+		    
+			int matA[][] = new int[input.nextInt()][input.nextInt()];
+		    
+			
+		
+			
 			
 			
 			
@@ -41,8 +30,6 @@ public class Driver {
 		
 			e.printStackTrace();
 		}
-		
-		
 		
 
 	}
